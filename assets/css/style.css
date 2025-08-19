@@ -3163,12 +3163,23 @@ font-weight: 600;
   position: relative;
   text-align: center;
   transition: var(--transition);
-  min-height: 475px;
   
+}
+.fix{
+  min-height: 475px;
 }
 .height-adjustment{
   min-height: 450px;
 }
+@media(max-width: 750px){
+  .fix{
+    min-height: 350px;
+  }
+  .height-adjustment{
+    min-height: 300px;
+  }
+}
+
 
 .team-item:hover{
   transform: translateY(-8px);
