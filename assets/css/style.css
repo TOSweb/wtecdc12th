@@ -3163,6 +3163,11 @@ font-weight: 600;
   position: relative;
   text-align: center;
   transition: var(--transition);
+  min-height: 475px;
+  
+}
+.height-adjustment{
+  min-height: 450px;
 }
 
 .team-item:hover{
@@ -3225,6 +3230,7 @@ font-weight: 600;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   padding-bottom: 12px;
+  
 }
 
 .team-area2 .team-img{
