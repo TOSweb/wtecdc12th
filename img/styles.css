@@ -1,0 +1,471 @@
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact-one {
+  position: relative;
+  z-index: 1;
+  background-color: var(--alefox-black2, #202221);
+  overflow: hidden;
+}
+.contact-one::after {
+  position: absolute;
+  right: -60px;
+  bottom: -380px;
+  width: 600px;
+  height: 600px;
+  background-color: var(--alefox-base, #44a05b);
+  border-radius: 50%;
+  content: "";
+  z-index: -1;
+  animation: zoomsIn 4s linear 0s infinite;
+}
+@media (max-width: 1500px) {
+  .contact-one::after {
+    display: none;
+  }
+}
+.contact-one__shape {
+  position: absolute;
+  right: 55px;
+  bottom: 150px;
+  width: 254px;
+  height: 254px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: treeMove2 6s linear 0s infinite;
+}
+@media (max-width: 1500px) {
+  .contact-one__shape {
+    display: none;
+  }
+}
+.contact-one__image {
+  position: relative;
+  overflow: hidden;
+}
+.contact-one__image img {
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .contact-one__image img {
+    max-width: none;
+  }
+}
+@media (max-width: 767px) {
+  .contact-one__image img {
+    min-height: 600px;
+    object-fit: cover;
+  }
+}
+.contact-one__info {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  z-index: 2;
+  width: 300px;
+  background-color: var(--alefox-white, #fff);
+  border-radius: 10px;
+  padding: 60px 40px 50px;
+  border-bottom: 10px solid var(--alefox-base, #44a05b);
+  text-align: center;
+}
+.contact-one__info__icon {
+  font-size: 84px;
+  line-height: 1;
+  color: var(--alefox-base, #44a05b);
+  display: block;
+}
+.contact-one__info__icon span {
+  display: inline-block;
+  transition: all 300ms linear;
+  transform: scale(1);
+}
+.contact-one__info:hover .contact-one__info__icon span {
+  transform: scale(0.9);
+}
+.contact-one__info__sub-title {
+  text-transform: uppercase;
+  margin: 14px 0 12px;
+  color: var(--alefox-black, #122f2a);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+.contact-one__info__title {
+  font-size: 22px;
+  line-height: 31px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+.contact-one__info__phone {
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--alefox-black, #122f2a);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+.contact-one__info__phone a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.contact-one__info__phone a:hover {
+  background-size: 100% 1px;
+}
+.contact-one__info__phone a:hover {
+  color: var(--alefox-base, #44a05b);
+}
+.contact-one__form {
+  padding: 40px 45px 45px;
+  position: relative;
+  z-index: 10;
+  background-color: var(--alefox-gray, #f6f4ec);
+  max-width: 470px;
+  width: 100%;
+  border-top: 3px solid var(--alefox-base, #44a05b);
+  margin-left: 50px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .contact-one__form {
+    margin: 80px auto;
+  }
+}
+.contact-one__form .sec-title {
+  padding-bottom: 39px;
+}
+.contact-one__form .alefox-btn {
+  margin: 0;
+  width: 100%;
+  color: var(--alefox-base, #44a05b);
+}
+
+.contact-info {
+  position: relative;
+}
+.contact-info__list {
+  margin: -1px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid var(--alefox-border-color, #dddddd);
+}
+@media (max-width: 991px) {
+  .contact-info__list {
+    flex-direction: column;
+  }
+}
+.contact-info__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 28px;
+  padding: 50px 60px;
+}
+@media (max-width: 1199px) {
+  .contact-info__item {
+    padding: 50px 30px;
+  }
+}
+.contact-info__item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  border: 1px dashed var(--alefox-base, #44a05b);
+  transform: scale(1.1);
+  opacity: 0;
+  z-index: -1;
+  transition: all 400ms linear;
+}
+.contact-info__item:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.contact-info__item__icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--alefox-black2, #202221);
+  color: var(--alefox-white, #fff);
+  font-size: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 400ms linear;
+}
+.contact-info__item__icon span {
+  display: inline-block;
+  transition: all 400ms linear;
+  transform: scale(1);
+}
+.contact-info__item:hover .contact-info__item__icon {
+  background-color: var(--alefox-base, #44a05b);
+}
+.contact-info__item:hover .contact-info__item__icon span {
+  transform: scale(0.9);
+}
+.contact-info__item__title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-info__item__text {
+  margin: 0;
+}
+.contact-info__item__text a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.contact-info__item__text a:hover {
+  background-size: 100% 1px;
+}
+.contact-info__item__text a:hover {
+  color: var(--alefox-base, #44a05b);
+}
+.contact-info__item + .contact-info__item::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
+  background-color: var(--alefox-border-color, #dddddd);
+}
+@media (max-width: 991px) {
+  .contact-info__item + .contact-info__item::after {
+    width: 100%;
+    height: 1px;
+  }
+}
+.contact-info--contact-page {
+  padding: 120px 0;
+}
+@media (max-width: 767px) {
+  .contact-info--contact-page {
+    padding: 80px 0;
+  }
+}
+.contact-info--contact-page .contact-info__item {
+  border: 1px solid var(--alefox-border-color, #dddddd);
+  padding: 32px 60px;
+  transition: all 400ms ease;
+}
+@media (max-width: 1199px) {
+  .contact-info--contact-page .contact-info__item {
+    padding: 32px 25px;
+    gap: 20px;
+  }
+}
+.contact-info--contact-page .contact-info__item::before {
+  width: 100%;
+  height: 100%;
+}
+.contact-info--contact-page .contact-info__item:hover {
+  border-color: transparent;
+}
+
+.contact-two {
+  position: relative;
+  z-index: 1;
+  background-color: var(--alefox-base, #44a05b);
+  overflow: hidden;
+  padding: 120px 0;
+}
+@media (max-width: 767px) {
+  .contact-two {
+    padding: 80px 0;
+  }
+}
+.contact-two::after {
+  position: absolute;
+  right: -125px;
+  bottom: -125px;
+  width: 255px;
+  height: 255px;
+  background-color: var(--alefox-base, #44a05b);
+  border-radius: 50%;
+  content: "";
+  opacity: 0.85;
+  animation: zoomsIn 4s linear 0s infinite;
+}
+@media (max-width: 1500px) {
+  .contact-two::after {
+    display: none;
+  }
+}
+.contact-two__bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 67.8%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-two__bg::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(14, 14, 14, 0.85);
+}
+@media (max-width: 767px) {
+  .contact-two__bg {
+    width: 100%;
+  }
+}
+.contact-two__shape {
+  width: 216px;
+  height: 127px;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  animation: movebounce3 4s linear infinite;
+}
+@media (max-width: 1800px) {
+  .contact-two__shape {
+    left: 1%;
+  }
+}
+@media (max-width: 1400px) {
+  .contact-two__shape {
+    display: none;
+  }
+}
+.contact-two__form {
+  padding: 40px 45px 45px;
+  position: relative;
+  z-index: 10;
+  background-color: var(--alefox-white, #fff);
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .contact-two__form {
+    margin: 0;
+    padding: 40px 25px 45px;
+  }
+}
+.contact-two__form .sec-title {
+  padding-bottom: 39px;
+}
+.contact-two__form .bootstrap-select > .dropdown-toggle,
+.contact-two__form input[type=text],
+.contact-two__form input[type=email],
+.contact-two__form textarea {
+  background-color: var(--alefox-white, #fff);
+}
+.contact-two__form .alefox-btn {
+  margin: 0;
+  width: 100%;
+  color: var(--alefox-base, #44a05b);
+}
+.contact-two__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 370px;
+}
+.contact-two__item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 50px 60px;
+}
+@media (max-width: 991px) {
+  .contact-two__item {
+    padding: 50px 40px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-two__item {
+    padding: 40px;
+  }
+}
+.contact-two__item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  border: 1px dashed var(--alefox-base, #44a05b);
+  transform: scale(1.1);
+  z-index: -1;
+  opacity: 0;
+  transition: all 400ms linear;
+}
+.contact-two__item:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.contact-two__item__icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--alefox-base, #44a05b);
+  color: var(--alefox-white, #fff);
+  font-size: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 400ms linear;
+}
+.contact-two__item__icon span {
+  display: inline-block;
+  transition: all 400ms linear;
+  transform: scale(1);
+}
+.contact-two__item:hover .contact-two__item__icon {
+  background-color: var(--alefox-white, #fff);
+  color: var(--alefox-base, #44a05b);
+}
+.contact-two__item:hover .contact-two__item__icon span {
+  transform: scale(0.9);
+}
+.contact-two__item__title {
+  color: var(--alefox-white, #fff);
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-two__item__text {
+  color: var(--alefox-white, #fff);
+  margin: 0;
+}
+.contact-two__item__text a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.contact-two__item__text a:hover {
+  background-size: 100% 1px;
+}
+.contact-two__item__text a:hover {
+  color: var(--alefox-base, #44a05b);
+}
